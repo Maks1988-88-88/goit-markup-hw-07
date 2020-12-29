@@ -1,14 +1,15 @@
+@import "../utils/variables";
+
 .header {
   background: #FFFFFF;
   padding-bottom: 25px;
   padding-top: 25px;
-}
 
-.header .container {
-  display: flex;
-  align-items: center;
+    & .container {
+      display: flex;
+      align-items: center;
 }
-
+}
 .header-logo {
   font-family: $secondary-font;
   text-decoration: none;
@@ -19,12 +20,10 @@
   letter-spacing: 0.03em;
   margin-right: 93px;
 
+    & > span {
+      color: $accent-color;
 }
-
-.header-logo > span {
-  color: $accent-color;
 }
-
 .header-nav {
   box-sizing: border-box;
   display: flex;
@@ -45,30 +44,15 @@
   letter-spacing: 0.02em;
   color: #212121;
   transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
-}
 
-.header-nav-link:hover, .header-nav-link:focus {
-  color: $accent-color;
-  transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
-}
 
+      &:hover, &:focus {
+    color: $accent-color;
+    transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+}
 .header-address {
   margin-left: auto;
-}
-
-.header-address-link {
-  text-decoration: none;
-  font-family: $main-font;
-  font-style: normal;
-  font-weight: 500;
-  font-size: 14px;
-  line-height: 1.142;
-  letter-spacing: 0.02em;
-  color: #757575;
-  display: flex;
-  align-items: center;
-  fill: #757575;
-  transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .header-address-li:not(:last-child) {
@@ -87,16 +71,30 @@
   margin: 3px 10px 3px 0;
 }
 
-
-.header-address-link:hover, .header-address-link:focus {
-  color: $accent-color;
+.header-address-link {
+  text-decoration: none;
+  font-family: $main-font;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 1.142;
+  letter-spacing: 0.02em;
+  color: #757575;
+  display: flex;
+  align-items: center;
+  fill: #757575;
   transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
+    &:hover, &:focus {
+      color: $accent-color;
+      transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.header-address-link:hover .icon-envelope,
-.header-address-link:hover .icon-vector,
-.header-address-link:focus .icon-envelope,
-.header-address-link:focus .icon-vector {
-  fill: $accent-color;
-  transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    &:hover .icon-envelope,
+    &:hover .icon-vector,
+    &:focus .icon-envelope,
+    &:focus .icon-vector {
+      fill: $accent-color;
+      transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
 }

@@ -23,12 +23,11 @@
 
 .advantage-block-section {
   width: 270px;
-}
 
-.advantage-block-section:not(:last-child) {
-  margin-right: 30px;
+  &:not(:last-child) {
+    margin-right: 30px;
 }
-
+}
 .advantage {
   font-family: $main-font;
   font-weight: 700;

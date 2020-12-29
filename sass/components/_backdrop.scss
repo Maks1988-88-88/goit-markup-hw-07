@@ -93,19 +93,19 @@
   font-size: 12px;
   line-height: 1.166;
   letter-spacing: 0.01em;
+
+
+    &:focus {
+      outline: none;
+      border: 1px solid $accent-color;
+      border-radius: 4px;
 }
 
-.modal__form-input:focus {
-  outline: none;
-  border: 1px solid $accent-color;
-  border-radius: 4px;
+    &:focus + .modal__form-icon {
+      fill: $accent-color;
+      transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
-
-.modal__form-input:focus + .modal__form-icon {
-  fill: $accent-color;
-  transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
-
 
 .modal__form-field {
   margin-bottom: 10px;
@@ -138,35 +138,20 @@
   padding: 12px 16px;
   resize: none;
   transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
-
   margin-bottom: 20px;
 
-
+  &::placeholder {
+    color: rgba(117, 117, 117, 0.5);
+    font-family: $main-font;
+    font-style: normal;
+    font-weight: 400;
 }
-
-.modal__form-message::placeholder {
-  color: rgba(117, 117, 117, 0.5);
-  font-family: $main-font;
-  font-style: normal;
-  font-weight: 400;
+  &:focus {
+    outline: none;
+    border-color: $accent-color;
+    transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
-
-
-.modal__form-message:focus {
-  outline: none;
-  border-color: $accent-color;
-  transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
-
-.modal__form-policy::before {
-  content: '';
-  display: inline-block;
-  width: 16px;
-  height: 15px;
-  border: 1px solid #000;
-  margin-right: 7px;
-}
-
 .modal__form-text {
   font-family: $main-font;
   font-style: normal;
@@ -177,22 +162,35 @@
   color: #757575;
 }
 
-.modal__form-policy a {
-  color: $accent-color;
-}
-
-.modal__form-policy:checked + .modal__form-policy::before {
-  background-image: url("../images/sprite/icon_check.svg");
-  background-repeat: no-repeat;
-  border: none;
-}
-
 .modal__form-policy {
   display: flex;
   align-items: center;
   justify-content: center;
   margin-bottom: 30px;
+
+
+  &::before {
+    content: '';
+    display: inline-block;
+    width: 16px;
+    height: 15px;
+    border: 1px solid #000;
+    margin-right: 7px;
 }
+
+
+
+  & a {
+    color: $accent-color;
+}
+
+  &:checked + &::before {
+    background-image: url("../images/sprite/icon_check.svg");
+    background-repeat: no-repeat;
+    border: none;
+}
+}
+
 
 .modal__form-btn {
   display: block;

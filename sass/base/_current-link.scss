@@ -5,9 +5,8 @@
   color: $accent-color;
   text-decoration: none;
   position: relative;
-}
 
-.current-link::before {
+  &::before {
   content: '';
   font-size: 40px;
   border-radius: 2px;
@@ -18,4 +17,5 @@
   bottom: -32px;
   left: 0;
   display: inline-block
+}
 }
