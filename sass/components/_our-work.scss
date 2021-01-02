@@ -1,4 +1,3 @@
-@import "../utils/variables";
 
 .our-work {
   font-family: $main-font;
@@ -7,7 +6,7 @@
   line-height: 1.166;
   text-align: center;
   letter-spacing: 0.03em;
-  color: #212121;
+  color: $accent-color-headline;
   margin-bottom: 50px;
 }
 

@@ -1,4 +1,3 @@
-@import "../utils/variables";
 
 .advantage-block {
   flex-direction: row;
@@ -35,7 +34,7 @@
   line-height: 1.142;
   letter-spacing: 0.03em;
   text-transform: uppercase;
-  color: #212121;
+  color: $accent-color-headline;
   margin-bottom: 10px;
 }
 
@@ -46,7 +45,7 @@
   font-size: 14px;
   line-height: 1.714;
   letter-spacing: 0.03em;
-  color: #757575;
+  color: $accent-color-about;
   width: 270px;
 
 }
